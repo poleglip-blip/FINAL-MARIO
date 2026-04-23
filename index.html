@@ -178,18 +178,12 @@
 
         // --- CACHE / STORAGE LOGIC ---
         const defaultQuestions = [
-            { q: "What is 10 + 10?", a: "20", o: ["20", "15", "25", "30"] },
-            { q: "Mario's hat color?", a: "Red", o: ["Red", "Green", "Blue", "Yellow"] },
-            { q: "Who is Mario's brother?", a: "Luigi", o: ["Luigi", "Wario", "Peach", "Bowser"] },
+            { q: "What is my name?", a: "glen", o: ["glen", "15", "25", "30"] },
+            { q: "How old are you?", a: "20", o: ["20", "Green", "Blue", "Yellow"] },
+            { q: "Who is Mario's brother?", a: "paul", o: ["paul", "Wario", "Peach", "Bowser"] },
             { q: "Collect what for points?", a: "Coins", o: ["Coins", "Goombas", "Bushes", "Pipes"] }
         ];
 
-        // Load from storage or use defaults
-        let questionBank = JSON.parse(localStorage.getItem('marioMazeData')) || defaultQuestions;
-
-        function saveToStorage() {
-            localStorage.setItem('marioMazeData', JSON.stringify(questionBank));
-        }
 
         function toggleMute(e) {
             e.stopPropagation();
